@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaif's Cuisine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5fcf4;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px 160px;
+        }
+
+        .left {
+            height: 40px;
+            width: 85px;
+            display: flex;
+            flex-direction: row;
+            font-family: 'Poppins', sans-serif;
+            margin: auto 0px;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            margin: 0px 14px;
+            font-weight: 500;
+        }
+
+        .bt {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 8px;
+            background-color: #26643b;
+            margin: 0px 10px;
+            padding: 8px 20px;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .btn a {
+            color: rgb(63, 60, 60);
+        }
+
+        .bt a {
+            color: #e8e8e8;
+        }
+
+        .timing {
+            display: flex;
+            justify-content: center;
+            margin: 120px 160px;
+        }
+
+        .info {
+            background-color: #d6e5d8;
+            width: 200px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0px;
+            margin: 0px 10px;
+        }
+
+        .info img {
+            width: 47px;
+            height: 47px;
+            margin-bottom: 30px;
+        }
+
+        .info1 {
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            margin-bottom: 15px;
+            line-height: 10px;
+        }
+
+        .info2 {
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
+
+        .inquiry {
+            margin: 100px 160px;
+        }
+        .inquiry1 h3 {
+            font-size: 36px;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(59, 65, 58);
+            margin-bottom: 30px;
+        }
+        .inquiry2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px
+        }
+
+        div:nth-child(5) {
+            grid-column: 1 / span 2;
+            grid-row: 3 / span 3;
+        }
+
+        label {
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: #3F3C3C;
+        }
+
+        .input {
+            border: none;
+            background-color: #d6e5d8;
+            border-radius: 10px;
+            width: 600px;
+            height: 60px;
+            margin: 10px 0px;
+            padding:20px;   
+            font-size: 18px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+        }
+
+        textarea {
+            border: none;
+            background-color: #d6e5d8;
+            border-radius: 10px;
+            padding:20px;   
+            font-size: 18px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+        }
+
+        .bt1 {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 8px;
+            background-color: #26643b;
+            padding: 10px 42px;
+            margin-right: 5px;
+            font-size: 20px;
+            box-sizing: border-box;
+            margin-top: 15px;
+            border: none;
+            color:#e8e8e8;
+            cursor: pointer;
+        }
+        .top {
+            width: 100%;
+            padding: 80px 160px 40px 160px;
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+            background-color: #d6e5d8;
+        }
+
+        #top-1 {
+            width: 470px;
+        }
+
+        #top-top img {
+            width: 150px;
+            height: 65px;
+            margin: 0px 0px 20px 0px;
+        }
+
+        #top-middle {
+            font-family: 'Raleway', sans-serif;
+            line-height: 25px;
+            font-size: 18px;
+            margin: 0px 0px 20px 0px;
+        }
+
+        #top-middle p {
+            width: 60%;
+            margin: 0px 0px 28px 0px;
+        }
+
+        div+p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            line-height: 10px;
+            font-weight: 500;
+            margin: 0px 0px 18px 0px;
+        }
+
+        #top-bottom {
+            display: flex;
+        }
+
+        #top-bottom img {
+            width: 37px;
+            height: 37px;
+            background-color: #e8e8e8;
+            border: 1px solid #a2de96;
+            border-radius: 8px;
+            margin: 0px 5px;
+            padding: 8px 8px;
+        }
+
+        .heading {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0px 0px 20px 0px;
+        }
+
+        li {
+            margin: 0px 0px 15px 0px;
+            font-family: 'Raleway', sans-serif;
+            cursor: pointer;
+            list-style: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        #top-2 {
+            width: 242px;
+        }
+
+        #top-2 a {
+            color: rgb(63, 60, 60);
+        }
+
+        #top-3 {
+            width: 242px;
+        }
+
+        #top-3 a {
+            color: rgb(63, 60, 60);
+        }
+
+        #top-4 {
+            width: 242px;
+        }
+
+        #top-4 a {
+            color: rgb(63, 60, 60);
+        }
+
+        .bottom {
+            font-family: 'Raleway', sans-serif;
+            margin: 0px 160px;
+            padding: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <a href="Home.html"><img
+                    src="https://d33wubrfki0l68.cloudfront.net/5509abae36c9c1c7d55a83ea5a1990f0d3b09c0a/12a1e/images/logo.svg"></a>
+        </div>
+        <div class="right">
+            <ul>
+                <li class="btn"><a href="Home.html">Home</a></li>
+                <li class="btn"><a href="Menu.html">Menu</a></li>
+                <li class="btn"><a href="About.html">About</a></li>
+                <li class="btn"><a href="Contact.html">Contact</a></li>
+                <li class="bt"><a href="BookTable.html">Book Table</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="timing">
+        <div class="info">
+            <img
+                src="https://d33wubrfki0l68.cloudfront.net/4d9f5ac84201972450cc866ccfee0ae2fb4ad2fe/f4f2e/images/wall-clock-icon.svg">
+            <p class="info1">10 AM - 7 PM</p>
+            <p class="info2">Opening Hour</p>
+        </div>
+        <div class="info">
+            <img
+                src="https://d33wubrfki0l68.cloudfront.net/c98678d730ee777c722aa6fc644e149ba86e74d4/240fe/images/address-icon.svg">
+            <p class="info1">GEC, Chittagong</p>
+            <p class="info2">Address</p>
+        </div>
+        <div class="info">
+            <img
+                src="https://d33wubrfki0l68.cloudfront.net/2d39cf6a442498142bd935a1ca5409ca5869e4be/e52ef/images/phone-icon.svg">
+            <p class="info1">+880123443</p>
+            <p class="info2">Call Now</p>
+        </div>
+    </section>
+    <section class="inquiry">
+        <div class="inquiry1">
+            <h3>Contact & Inquiry</h3>
+        </div>
+        <form class="inquiry2" action="Thanks.html">
+            <div>
+                <label for="fname">First Name</label>
+                <br>
+                <input type="text" name="fname" class="input" required>
+            </div>
+            <div>
+                <label for="lname">Last Name</label>
+                <br>
+                <input type="text" name="lname" class="input" required>
+            </div>
+            <div>
+                <label for="email">E-Mail</label>
+                <br>
+                <input type="email" name="email" class="input" requires>
+            </div>
+            <div>
+                <label for="Subject">Subject</label>
+                <br>
+                <input type="text" name="Subject" class="input" required>
+            </div>
+            <div>
+                <label for="A">Massage</label>
+                <br>
+                <textarea name="myText" cols="121" rows="10" id="A" required></textarea>
+            </div>
+            <div>
+                <input type="submit" class="bt1" value="Send">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="top">
+            <div id="top-1">
+                <div id="top-top" class="container">
+                    <a href="Home.html"><img
+                            src="https://d33wubrfki0l68.cloudfront.net/5509abae36c9c1c7d55a83ea5a1990f0d3b09c0a/12a1e/images/logo.svg"></a>
+                </div>
+                <div id="top-middle" class="container">
+                    <p>Fresh and delicious traditional Bangladeshi food to delight the whole family.</p>
+                </div>
+                <p>Follow us</p>
+                <div id="top-bottom" class="container">
+                    <div class="logo">
+                        <a href="Home.html"><img src="/Images/facebook.png"></a>
+                    </div>
+                    <div class="logo">
+                        <a href="Home.html"><img src="/Images/insta.png"></a>
+                    </div>
+                    <div class="logo">
+                        <a href="Home.html"><img src="/Images/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="top-2" class="container">
+                <p class="heading">Links
+                <p>
+                <ol>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="BookTable.html">Book Table</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Home.html">Privacy Policy</a></li>
+                </ol>
+            </div>
+            <div id="top-3" class="container">
+                <p class="heading">Support</p>
+                <ol>
+                    <li><a href="Home.html">Contact</a></li>
+                    <li><a href="Home.html">Support Center</a></li>
+                    <li><a href="Home.html">Feedback</a></li>
+                </ol>
+            </div>
+            <div id="top-4" class="container">
+                <p class="heading">Contact</p>
+                <ol>
+                    <li><a href="Home.html">+880123</a></li>
+                    <li><a href="Home.html">webcifar@gmail.com</a></li>
+                    <li><a href="Home.html">GEC Circle, Chittagong, Bangladesh</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="bottom">
+            &copy; copyright 2021 Shaif's Cuisine | All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>
